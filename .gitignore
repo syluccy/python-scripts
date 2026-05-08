@@ -1,0 +1,7 @@
+.venv/
+__pycache__/
+*.pyc
+.env
+anchor_cache.json
+alignment_report.csv
+*.srt
