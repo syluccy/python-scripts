@@ -22,6 +22,14 @@ import time
 from pathlib import Path
 from typing import Any, Iterable
 
+try:
+    from dotenv import load_dotenv
+except ImportError:  # Keep --analyze-only usable even without optional dotenv support.
+    load_dotenv = None
+
+if load_dotenv is not None:
+    load_dotenv()
+
 
 TIME_RE = re.compile(
     r"(?P<start>\d{2}:\d{2}:\d{2},\d{3})\s*-->\s*"

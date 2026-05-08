@@ -13,10 +13,21 @@ wording and cue durations, and ignores music/SFX-like cues while aligning.
 python3 -m venv .venv
 source .venv/bin/activate
 pip install -r requirements.txt
+```
+
+Set your API key either as a normal environment variable:
+
+```bash
 export OPENAI_API_KEY="sk-..."
 ```
 
-Optional:
+or put it in a local `.env` file next to the script:
+
+```bash
+OPENAI_API_KEY=sk-...
+```
+
+Optional model override:
 
 ```bash
 export OPENAI_MODEL="gpt-4.1-mini"
